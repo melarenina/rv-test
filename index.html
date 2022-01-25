@@ -12,108 +12,148 @@
   </head>
 
   <body>
-    <section class="hero">
-      <img
-        src="images/hero/mobile/mobile-leaves.png"
-        alt="Greenthumb"
-        class="hero__leaves"
-      />
-      <div class="container">
+    <div class="green-thumb">
+      <section class="hero">
         <img
-          src="images/icons/logo-white.svg"
+          src="images/hero/mobile/mobile-leaves.png"
           alt="Greenthumb"
-          class="hero__logo"
+          class="hero__leaves"
         />
-        <div class="hero__text">
-          <h1 class="hero__title">Find your next green friend</h1>
+        <div class="container">
           <img
-            src="images/icons/arrow-down.svg"
+            src="images/icons/logo-white.svg"
             alt="Greenthumb"
-            class="hero__icon"
+            class="hero__logo"
           />
-        </div>
-        <div class="hero__image">
-          <img
-            src="images/hero/mobile/mobile-plantperson.png"
-            alt="Greenthumb"
-            class="hero__plant-person"
-          />
-        </div>
-      </div>
-    </section>
-    <section class="form">
-      <div class="container">
-        <form>
-          <div class="form__option">
+          <div class="hero__text">
+            <h1 class="hero__title">Find your next green friend</h1>
             <img
-              src="images/illustrations/sun.png"
+              src="images/icons/arrow-down.svg"
               alt="Greenthumb"
-              class="form__image"
+              class="hero__icon"
             />
-            <p>
-              <span>1</span>. Set the amount of <span>sunlight</span>
-              your plant will get.
-            </p>
-            <select name="sunlight" class="form__select">
-              <option value="">Select...</option>
-              <option value="no">No sunlight</option>
-              <option value="low">Low sunlight</option>
-              <option value="high">High sunlight</option>
-            </select>
           </div>
-          <div class="form__option">
+          <div class="hero__image">
             <img
-              src="images/illustrations/wateringcan.png"
+              src="images/hero/mobile/mobile-plantperson.png"
               alt="Greenthumb"
-              class="form__image"
+              class="hero__plant-person"
             />
-            <p>
-              <span>2</span>. How often do you want to <span>water</span> your
-              plant?
-            </p>
-            <select name="sunlight" class="form__select">
-              <option value="">Select...</option>
-              <option value="regularly">Regularly</option>
-              <option value="daily">Daily</option>
-              <option value="rarely">Rarely</option>
-            </select>
           </div>
-          <div>
+        </div>
+      </section>
+      <section class="form">
+        <div class="container">
+          <form>
+            <div class="form__option">
+              <img
+                src="images/illustrations/sun.png"
+                alt="Greenthumb"
+                class="form__image"
+              />
+              <p>
+                <span>1</span>. Set the amount of <span>sunlight</span>
+                your plant will get.
+              </p>
+              <select name="sun" id="sun" class="form__select">
+                <option value="">Select...</option>
+                <option value="no">No sunlight</option>
+                <option value="low">Low sunlight</option>
+                <option value="high">High sunlight</option>
+              </select>
+            </div>
+            <div class="form__option">
+              <img
+                src="images/illustrations/wateringcan.png"
+                alt="Greenthumb"
+                class="form__image"
+              />
+              <p>
+                <span>2</span>. How often do you want to <span>water</span> your
+                plant?
+              </p>
+              <select name="water" id="water" class="form__select">
+                <option value="">Select...</option>
+                <option value="regularly">Regularly</option>
+                <option value="daily">Daily</option>
+                <option value="rarely">Rarely</option>
+              </select>
+            </div>
+            <div>
+              <img
+                src="images/illustrations/dog.png"
+                alt="Greenthumb"
+                class="form__image"
+              />
+              <p>
+                <span>3</span>. Do you have pets? Do they
+                <span>chew</span> plants?
+              </p>
+              <select name="pets" id="pets" class="form__select">
+                <option value="">Select...</option>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+              </select>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section class="no-results" id="no-results">
+        <div class="container container--gray">
+          <div class="no-results__text">
+            <h1 class="no-results__title">No results yet...</h1>
+            <p class="no-results_description">
+              Use the filters above to find the plant that best fits your
+              environment :)
+            </p>
+          </div>
+          <div class="no-results__illustration">
             <img
-              src="images/illustrations/dog.png"
+              src="images/illustrations/no-results.png"
               alt="Greenthumb"
-              class="form__image"
+              class="no-results__image"
             />
-            <p>
-              <span>3</span>. Do you have pets? Do they
-              <span>chew</span> plants?
-            </p>
-            <select name="sunlight" class="form__select">
-              <option value="">Select...</option>
-              <option value="true">Yes</option>
-              <option value="false">No</option>
-            </select>
           </div>
-        </form>
-      </div>
-    </section>
-    <section class="no-results">
-      <div class="container container--gray">
-        <div class="no-results__text">
-          <h1 class="no-results__title">No results yet...</h1>
-          <p class="no-results_description">
-            Use the filters above to find the plant that best fits your
-            environment :)
-          </p>
         </div>
-        <div class="no-results__illustration">
-          <img
-            src="images/illustrations/no-results.png"
-            alt="Greenthumb"
-            class="no-results__image"
-          />
+      </section>
+
+      <section class="picks hidden" id="picks">
+        <div class="container container--gray">
+          <div class="picks__illustration">
+            <img
+              src="images/illustrations/pick.png"
+              alt="Greenthumb"
+              class="picks__image"
+            />
+          </div>
+          <div class="picks__text">
+            <h1 class="picks__title">Our picks for you</h1>
+          </div>
+          <div class="picks__cards" id="cards"></div>
+          <button
+            class="button button--outlined"
+            type="button"
+            onclick="backToTop();"
+          >
+            back to the top
+            <img
+              src="images/icons/arrow-up.svg"
+              alt="arrow-up"
+              class="button__icon"
+            />
+          </button>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
+
+    <script src="./js/plants-handler.js"></script>
+    <script>
+      function backToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+    </script>
   </body>
 </html>
