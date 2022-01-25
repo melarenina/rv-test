@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Front End Test - Greenthumb</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.scss" />
+  </head>
+
+  <body>
+    <section class="hero">
+      <img
+        src="images/hero/mobile/mobile-leaves.png"
+        alt="Greenthumb"
+        class="hero__leaves"
+      />
+      <div class="container">
+        <img
+          src="images/icons/logo-white.svg"
+          alt="Greenthumb"
+          class="hero__logo"
+        />
+        <div class="hero__text">
+          <h1 class="hero__title">Find your next green friend</h1>
+          <img
+            src="images/icons/arrow-down.svg"
+            alt="Greenthumb"
+            class="hero__icon"
+          />
+        </div>
+        <div class="hero__image">
+          <img
+            src="images/hero/mobile/mobile-plantperson.png"
+            alt="Greenthumb"
+            class="hero__plant-person"
+          />
+        </div>
+      </div>
+    </section>
+    <section class="form">
+      <div class="container">
+        <form>
+          <div class="form__option">
+            <img
+              src="images/illustrations/sun.png"
+              alt="Greenthumb"
+              class="form__image"
+            />
+            <p>
+              <span>1</span>. Set the amount of <span>sunlight</span>
+              your plant will get.
+            </p>
+            <select name="sunlight" class="form__select">
+              <option value="">Select...</option>
+              <option value="no">No sunlight</option>
+              <option value="low">Low sunlight</option>
+              <option value="high">High sunlight</option>
+            </select>
+          </div>
+          <div class="form__option">
+            <img
+              src="images/illustrations/wateringcan.png"
+              alt="Greenthumb"
+              class="form__image"
+            />
+            <p>
+              <span>2</span>. How often do you want to <span>water</span> your
+              plant?
+            </p>
+            <select name="sunlight" class="form__select">
+              <option value="">Select...</option>
+              <option value="regularly">Regularly</option>
+              <option value="daily">Daily</option>
+              <option value="rarely">Rarely</option>
+            </select>
+          </div>
+          <div>
+            <img
+              src="images/illustrations/dog.png"
+              alt="Greenthumb"
+              class="form__image"
+            />
+            <p>
+              <span>3</span>. Do you have pets? Do they
+              <span>chew</span> plants?
+            </p>
+            <select name="sunlight" class="form__select">
+              <option value="">Select...</option>
+              <option value="true">Yes</option>
+              <option value="false">No</option>
+            </select>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="no-results">
+      <div class="container container--gray">
+        <div class="no-results__text">
+          <h1 class="no-results__title">No results yet...</h1>
+          <p class="no-results_description">
+            Use the filters above to find the plant that best fits your
+            environment :)
+          </p>
+        </div>
+        <div class="no-results__illustration">
+          <img
+            src="images/illustrations/no-results.png"
+            alt="Greenthumb"
+            class="no-results__image"
+          />
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

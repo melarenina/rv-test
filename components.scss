@@ -1,0 +1,91 @@
+@import "./general.scss";
+
+.hero {
+  height: 48em;
+  position: relative;
+  background-color: $light-green;
+
+  &__logo {
+    position: absolute;
+  }
+
+  &__leaves {
+    width: 100vw;
+    position: absolute;
+  }
+
+  &__image {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__text {
+    width: 80vw;
+    margin-top: 3em;
+    position: absolute;
+    color: white !important;
+  }
+
+  &__plant-person {
+    width: 22em;
+    margin-top: 25.4em;
+  }
+}
+
+.button {
+  width: 22em;
+  border: none;
+  padding: 1em;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 2em;
+  font-weight: lighter;
+
+  &--outlined {
+    color: $dark-green;
+    background-color: transparent;
+    border: 1px solid $dark-green;
+  }
+
+  &--filled {
+    background-color: $dark-green;
+    color: white;
+  }
+}
+
+.form {
+  color: $dark-gray;
+
+  &__option {
+    margin-bottom: 4em;
+  }
+
+  &__select {
+    width: 78vw;
+    color: $gray;
+    padding: 0.8em;
+    border-radius: 2em;
+    margin-top: 1em;
+    border: $gray 1px solid;
+  }
+
+  &__image {
+    width: 26vw;
+  }
+}
+
+.no-results {
+  &__text {
+    color: $gray;
+  }
+
+  &__illustration {
+    display: flex;
+    margin-top: 3em;
+    justify-content: center;
+  }
+
+  &__image {
+    width: 24vw;
+  }
+}

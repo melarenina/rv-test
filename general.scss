@@ -1,0 +1,43 @@
+$gray: #9f9f9f;
+$light-gray: #f5f5f5;
+$dark-gray: #797979;
+
+$light-green: #75bc97;
+$dark-green: #15573f;
+$darker-green: #0c221b;
+
+$salmon: #fd9872;
+
+.container {
+  padding: 2em 3em;
+
+  &--gray {
+    background-color: $light-gray;
+  }
+}
+
+h1 {
+  font-size: xxx-large;
+}
+
+span {
+  color: $dark-gray;
+  font-weight: bold;
+}
+
+p {
+  width: 65vw;
+  line-height: 1.6;
+}
+
+/* Small devices */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices */
+@media only screen and (min-width: 992px) {
+}
