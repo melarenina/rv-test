@@ -42,6 +42,43 @@
           </div>
         </div>
       </section>
+      <section class="hero--desktop">
+        <div class="hero--desktop__images">
+          <img
+            src="images/hero/mobile/mobile-plantperson.png"
+            alt="Greenthumb"
+            class="hero--desktop__plant-person"
+          />
+          <img
+            src="images/hero/desktop/left-leaves.png"
+            alt="Greenthumb"
+            class="hero--desktop__left-leaves"
+          />
+
+          <img
+            src="images/hero/desktop/right-leaves.png"
+            alt="Greenthumb"
+            class="hero--desktop__right-leaves"
+          />
+        </div>
+
+        <div class="container--desktop">
+          <img
+            src="images/icons/logo-white.svg"
+            alt="Greenthumb"
+            class="hero--desktop__logo"
+          />
+          <div class="hero--desktop__text">
+            <h1 class="hero--desktop__title">Find your next green friend</h1>
+            <img
+              src="images/icons/arrow-down.svg"
+              alt="Greenthumb"
+              class="hero--desktop__icon"
+            />
+          </div>
+          <div class="hero--desktop__image"></div>
+        </div>
+      </section>
       <section class="form">
         <div class="container">
           <form>
@@ -98,8 +135,82 @@
           </form>
         </div>
       </section>
+      <section class="form--desktop">
+        <div class="container--desktop">
+          <form>
+            <div class="form__option">
+              <img
+                src="images/illustrations/sun.png"
+                alt="Greenthumb"
+                class="form__image"
+              />
+              <p>
+                <span>1</span>. Set the amount of <span>sunlight</span>
+                your plant will get.
+              </p>
+              <select name="sun" id="sun" class="form__select">
+                <option value="">Select...</option>
+                <option value="no">No sunlight</option>
+                <option value="low">Low sunlight</option>
+                <option value="high">High sunlight</option>
+              </select>
+            </div>
+            <div class="form__option">
+              <img
+                src="images/illustrations/wateringcan.png"
+                alt="Greenthumb"
+                class="form__image"
+              />
+              <p>
+                <span>2</span>. How often do you want to <span>water</span> your
+                plant?
+              </p>
+              <select name="water" id="water" class="form__select">
+                <option value="">Select...</option>
+                <option value="regularly">Regularly</option>
+                <option value="daily">Daily</option>
+                <option value="rarely">Rarely</option>
+              </select>
+            </div>
+            <div>
+              <img
+                src="images/illustrations/dog.png"
+                alt="Greenthumb"
+                class="form__image"
+              />
+              <p>
+                <span>3</span>. Do you have pets? Do they
+                <span>chew</span> plants?
+              </p>
+              <select name="pets" id="pets" class="form__select">
+                <option value="">Select...</option>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+              </select>
+            </div>
+          </form>
+        </div>
+      </section>
       <section class="no-results" id="no-results">
-        <div class="container container--gray">
+        <div class="container container--results">
+          <div class="no-results__text">
+            <h1 class="no-results__title">No results yet...</h1>
+            <p class="no-results_description">
+              Use the filters above to find the plant that best fits your
+              environment :)
+            </p>
+          </div>
+          <div class="no-results__illustration">
+            <img
+              src="images/illustrations/no-results.png"
+              alt="Greenthumb"
+              class="no-results__image"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="no-results" id="no-results">
+        <div class="container--desktop container--desktop--results">
           <div class="no-results__text">
             <h1 class="no-results__title">No results yet...</h1>
             <p class="no-results_description">
@@ -118,7 +229,7 @@
       </section>
 
       <section class="picks hidden" id="picks">
-        <div class="container container--gray">
+        <div class="container container--results">
           <div class="picks__illustration">
             <img
               src="images/illustrations/pick.png"

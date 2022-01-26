@@ -11,8 +11,18 @@ $salmon: #fd9872;
 .container {
   padding: 2em 3em;
 
-  &--gray {
+  &--results {
     background-color: $light-gray;
+  }
+}
+
+.container--desktop {
+  padding: 3em 18em;
+
+  &--results {
+    display: flex;
+    background-color: $light-gray;
+    justify-content: space-between;
   }
 }
 
@@ -32,6 +42,10 @@ span {
 p {
   width: 65vw;
   line-height: 1.6;
+
+  @media only screen and (min-width: 992px) {
+    width: 17vw;
+  }
 }
 
 /* Small devices */
