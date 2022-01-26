@@ -62,7 +62,7 @@
           />
         </div>
 
-        <div class="container--desktop">
+        <div class="container">
           <img
             src="images/icons/logo-white.svg"
             alt="Greenthumb"
@@ -135,82 +135,8 @@
           </form>
         </div>
       </section>
-      <section class="form--desktop">
-        <div class="container--desktop">
-          <form>
-            <div class="form__option">
-              <img
-                src="images/illustrations/sun.png"
-                alt="Greenthumb"
-                class="form__image"
-              />
-              <p>
-                <span>1</span>. Set the amount of <span>sunlight</span>
-                your plant will get.
-              </p>
-              <select name="sun" id="sun" class="form__select">
-                <option value="">Select...</option>
-                <option value="no">No sunlight</option>
-                <option value="low">Low sunlight</option>
-                <option value="high">High sunlight</option>
-              </select>
-            </div>
-            <div class="form__option">
-              <img
-                src="images/illustrations/wateringcan.png"
-                alt="Greenthumb"
-                class="form__image"
-              />
-              <p>
-                <span>2</span>. How often do you want to <span>water</span> your
-                plant?
-              </p>
-              <select name="water" id="water" class="form__select">
-                <option value="">Select...</option>
-                <option value="regularly">Regularly</option>
-                <option value="daily">Daily</option>
-                <option value="rarely">Rarely</option>
-              </select>
-            </div>
-            <div>
-              <img
-                src="images/illustrations/dog.png"
-                alt="Greenthumb"
-                class="form__image"
-              />
-              <p>
-                <span>3</span>. Do you have pets? Do they
-                <span>chew</span> plants?
-              </p>
-              <select name="pets" id="pets" class="form__select">
-                <option value="">Select...</option>
-                <option value="true">Yes</option>
-                <option value="false">No</option>
-              </select>
-            </div>
-          </form>
-        </div>
-      </section>
       <section class="no-results" id="no-results">
         <div class="container container--results">
-          <div class="no-results__text">
-            <h1 class="no-results__title">No results yet...</h1>
-            <p class="no-results_description">
-              Use the filters above to find the plant that best fits your
-              environment :)
-            </p>
-          </div>
-          <div class="no-results__illustration">
-            <img
-              src="images/illustrations/no-results.png"
-              alt="Greenthumb"
-              class="no-results__image"
-            />
-          </div>
-        </div>
-      </section>
-      <section class="no-results" id="no-results">
-        <div class="container--desktop container--desktop--results">
           <div class="no-results__text">
             <h1 class="no-results__title">No results yet...</h1>
             <p class="no-results_description">
@@ -244,7 +170,7 @@
           <button
             class="button button--outlined"
             type="button"
-            onclick="backToTop();"
+            id="button-back-to-top"
           >
             back to the top
             <img
@@ -258,13 +184,6 @@
     </div>
 
     <script src="./js/plants-handler.js"></script>
-    <script>
-      function backToTop() {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      }
-    </script>
+    <script src="./js/utils.js"></script>
   </body>
 </html>

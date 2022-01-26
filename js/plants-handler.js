@@ -1,35 +1,49 @@
 document.addEventListener(
-  "input",
-  function (event) {
-    if (event.target.id !== "pets") return;
-
+  "change",
+  function () {
     const sun = document.getElementById("sun").value;
     const water = document.getElementById("water").value;
     const pets = document.getElementById("pets").value;
 
-    const extraParams = {
-      sun: sun,
-      water: water,
-      pets: pets,
-    };
+    if (sun && water && pets) {
+      const extraParams = {
+        sun: sun,
+        water: water,
+        pets: pets,
+      };
 
-    const URL =
-      "https://front-br-challenges.web.app/api/v2/green-thumb/?" +
-      new URLSearchParams(extraParams).toString();
+      const URL =
+        "https://front-br-challenges.web.app/api/v2/green-thumb/?" +
+        new URLSearchParams(extraParams).toString();
 
-    fetch(URL)
-      .then(function (response) {
-        return response.json(); // successful api call :)
-      })
-      .then(function (data) {
-        showPlants(data);
-      })
-      .catch(function (err) {
-        console.warn("Something went wrong.", err);
-      });
+      fetch(URL)
+        .then(function (response) {
+          return response.json(); // successful api call :)
+        })
+        .then(function (data) {
+          showPlants(data);
+        })
+        .catch(function (err) {
+          console.log(err);
+          hideResults();
+        });
+    }
   },
   false
 );
+
+function hideResults() {
+  const noResultsDiv = document.getElementById("no-results");
+  const picksDiv = document.getElementById("picks");
+
+  noResultsDiv.classList.contains("hidden")
+    ? noResultsDiv.classList.remove("hidden")
+    : null;
+
+  picksDiv.classList.contains("hidden")
+    ? null
+    : picksDiv.classList.add("hidden");
+}
 
 function showPlants(plants) {
   const cardsHTML = document.getElementById("cards");
