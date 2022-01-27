@@ -1,12 +1,9 @@
 @import "./scss/components.scss";
 @import "./scss/general.scss";
-@import "./scss/colors.scss";
-
-* {
-  font-family: "Montserrat", sans-serif;
-}
+@import "./scss/variables.scss";
 
 body {
+  font-family: "Montserrat", sans-serif;
   background-color: white;
   margin: 0;
 }

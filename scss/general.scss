@@ -1,14 +1,14 @@
-@import "./scss/colors.scss";
+@import "./scss/variables.scss";
 
 .container {
-  padding: 2em 3em;
+  padding: $spacing-4;
 
   &--results {
     background-color: $light-gray;
   }
 
-  @media only screen and (min-width: 992px) {
-    padding: 3em 18em;
+  @media only screen and (min-width: $media-query-desktop) {
+    padding: 57px 285px 53px 270px;
   }
 }
 
@@ -16,8 +16,31 @@
   display: none;
 }
 
+.box {
+  width: 219px;
+  line-height: 1.6;
+}
+
 h1 {
-  font-size: xxx-large;
+  font-size: 40px;
+  margin-bottom: $spacing-2;
+
+  @media only screen and (min-width: $media-query-desktop) {
+    font-size: 70px;
+    margin-bottom: $spacing-3;
+  }
+}
+
+h2 {
+  font-size: 45px;
+}
+
+h4 {
+  font-weight: normal;
+}
+
+p {
+  font-size: 14px;
 }
 
 span {
@@ -25,11 +48,22 @@ span {
   font-weight: bold;
 }
 
-p {
-  width: 65vw;
-  line-height: 1.6;
+figure {
+  margin: 0;
+}
 
-  @media only screen and (min-width: 992px) {
-    width: 17vw;
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+ol {
+  padding: 0;
+  list-style: none;
+
+  @media only screen and (min-width: $media-query-desktop) {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
   }
 }

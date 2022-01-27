@@ -13,174 +13,226 @@
 
   <body>
     <div class="green-thumb">
-      <section class="hero">
-        <img
-          src="images/hero/mobile/mobile-leaves.png"
-          alt="Greenthumb"
-          class="hero__leaves"
-        />
-        <div class="container">
-          <img
-            src="images/icons/logo-white.svg"
-            alt="Greenthumb"
-            class="hero__logo"
-          />
-          <div class="hero__text">
-            <h1 class="hero__title">Find your next green friend</h1>
+      <header>
+        <section class="hero">
+          <figure>
             <img
-              src="images/icons/arrow-down.svg"
+              src="images/hero/mobile/mobile-leaves.png"
               alt="Greenthumb"
-              class="hero__icon"
+              class="hero__leaves"
             />
-          </div>
-          <div class="hero__image">
-            <img
-              src="images/hero/mobile/mobile-plantperson.png"
-              alt="Greenthumb"
-              class="hero__plant-person"
-            />
-          </div>
-        </div>
-      </section>
-      <section class="hero--desktop">
-        <div class="hero--desktop__images">
-          <img
-            src="images/hero/mobile/mobile-plantperson.png"
-            alt="Greenthumb"
-            class="hero--desktop__plant-person"
-          />
-          <img
-            src="images/hero/desktop/left-leaves.png"
-            alt="Greenthumb"
-            class="hero--desktop__left-leaves"
-          />
-
-          <img
-            src="images/hero/desktop/right-leaves.png"
-            alt="Greenthumb"
-            class="hero--desktop__right-leaves"
-          />
-        </div>
-
-        <div class="container">
-          <img
-            src="images/icons/logo-white.svg"
-            alt="Greenthumb"
-            class="hero--desktop__logo"
-          />
-          <div class="hero--desktop__text">
-            <h1 class="hero--desktop__title">Find your next green friend</h1>
-            <img
-              src="images/icons/arrow-down.svg"
-              alt="Greenthumb"
-              class="hero--desktop__icon"
-            />
-          </div>
-          <div class="hero--desktop__image"></div>
-        </div>
-      </section>
-      <section class="form">
-        <div class="container">
-          <form>
-            <div class="form__option">
+          </figure>
+          <div class="container">
+            <figure>
               <img
-                src="images/illustrations/sun.png"
+                src="images/icons/logo-white.svg"
                 alt="Greenthumb"
-                class="form__image"
+                class="hero__logo"
               />
-              <p>
-                <span>1</span>. Set the amount of <span>sunlight</span>
-                your plant will get.
-              </p>
-              <select name="sun" id="sun" class="form__select">
-                <option value="">Select...</option>
-                <option value="no">No sunlight</option>
-                <option value="low">Low sunlight</option>
-                <option value="high">High sunlight</option>
-              </select>
-            </div>
-            <div class="form__option">
-              <img
-                src="images/illustrations/wateringcan.png"
-                alt="Greenthumb"
-                class="form__image"
-              />
-              <p>
-                <span>2</span>. How often do you want to <span>water</span> your
-                plant?
-              </p>
-              <select name="water" id="water" class="form__select">
-                <option value="">Select...</option>
-                <option value="regularly">Regularly</option>
-                <option value="daily">Daily</option>
-                <option value="rarely">Rarely</option>
-              </select>
-            </div>
-            <div>
-              <img
-                src="images/illustrations/dog.png"
-                alt="Greenthumb"
-                class="form__image"
-              />
-              <p>
-                <span>3</span>. Do you have pets? Do they
-                <span>chew</span> plants?
-              </p>
-              <select name="pets" id="pets" class="form__select">
-                <option value="">Select...</option>
-                <option value="true">Yes</option>
-                <option value="false">No</option>
-              </select>
-            </div>
-          </form>
-        </div>
-      </section>
-      <section class="no-results" id="no-results">
-        <div class="container container--results">
-          <div class="no-results__text">
-            <h1 class="no-results__title">No results yet...</h1>
-            <p class="no-results_description">
-              Use the filters above to find the plant that best fits your
-              environment :)
-            </p>
-          </div>
-          <div class="no-results__illustration">
-            <img
-              src="images/illustrations/no-results.png"
-              alt="Greenthumb"
-              class="no-results__image"
-            />
-          </div>
-        </div>
-      </section>
+            </figure>
 
-      <section class="picks hidden" id="picks">
-        <div class="container container--results">
-          <div class="picks__illustration">
-            <img
-              src="images/illustrations/pick.png"
-              alt="Greenthumb"
-              class="picks__image"
-            />
+            <div class="hero__text">
+              <h1 class="hero__title">Find your next green friend</h1>
+              <figure>
+                <img
+                  src="images/icons/arrow-down.svg"
+                  alt="Greenthumb"
+                  class="hero__icon"
+                />
+              </figure>
+            </div>
+            <div class="hero__image">
+              <figure>
+                <img
+                  src="images/hero/mobile/mobile-plantperson.png"
+                  alt="Greenthumb"
+                  class="hero__plant-person"
+                />
+              </figure>
+            </div>
           </div>
-          <div class="picks__text">
-            <h1 class="picks__title">Our picks for you</h1>
+        </section>
+        <section class="hero--desktop">
+          <div class="hero--desktop__images">
+            <figure>
+              <img
+                src="images/hero/mobile/mobile-plantperson.png"
+                alt="Greenthumb"
+                class="hero--desktop__plant-person"
+              />
+            </figure>
+
+            <figure>
+              <img
+                src="images/hero/desktop/left-leaves.png"
+                alt="Greenthumb"
+                class="hero--desktop__left-leaves"
+              />
+            </figure>
+
+            <figure>
+              <img
+                src="images/hero/desktop/right-leaves.png"
+                alt="Greenthumb"
+                class="hero--desktop__right-leaves"
+              />
+            </figure>
           </div>
-          <div class="picks__cards" id="cards"></div>
-          <button
-            class="button button--outlined"
-            type="button"
-            id="button-back-to-top"
-          >
-            back to the top
-            <img
-              src="images/icons/arrow-up.svg"
-              alt="arrow-up"
-              class="button__icon"
-            />
-          </button>
-        </div>
-      </section>
+
+          <div class="container">
+            <figure>
+              <img
+                src="images/icons/logo-white.svg"
+                alt="Greenthumb"
+                class="hero--desktop__logo"
+              />
+            </figure>
+
+            <div class="hero--desktop__text">
+              <h1 class="hero--desktop__title">Find your next green friend</h1>
+              <figure>
+                <img
+                  src="images/icons/arrow-down.svg"
+                  alt="Greenthumb"
+                  class="hero--desktop__icon"
+                />
+              </figure>
+            </div>
+            <div class="hero--desktop__image"></div>
+          </div>
+        </section>
+      </header>
+
+      <main>
+        <section class="form">
+          <div class="container">
+            <form>
+              <fieldset>
+                <ol>
+                  <li class="form__option">
+                    <figure>
+                      <img
+                        src="images/illustrations/sun.png"
+                        alt="Greenthumb"
+                        class="form__image"
+                      />
+                    </figure>
+                    <div class="box">
+                      <p>
+                        <span>1</span>. Set the amount of <span>sunlight</span>
+                        your plant will get.
+                      </p>
+                    </div>
+                    <select name="sun" id="sun" class="form__select">
+                      <option value="">Select...</option>
+                      <option value="no">No sunlight</option>
+                      <option value="low">Low sunlight</option>
+                      <option value="high">High sunlight</option>
+                    </select>
+                  </li>
+                  <li class="form__option">
+                    <figure>
+                      <img
+                        src="images/illustrations/wateringcan.png"
+                        alt="Greenthumb"
+                        class="form__image"
+                      />
+                    </figure>
+                    <div class="box">
+                      <p>
+                        <span>2</span>. How often do you want to
+                        <span>water</span> your plant?
+                      </p>
+                    </div>
+                    <select name="water" id="water" class="form__select">
+                      <option value="">Select...</option>
+                      <option value="regularly">Regularly</option>
+                      <option value="daily">Daily</option>
+                      <option value="rarely">Rarely</option>
+                    </select>
+                  </li>
+                  <li>
+                    <figure>
+                      <img
+                        src="images/illustrations/dog.png"
+                        alt="Greenthumb"
+                        class="form__image"
+                      />
+                    </figure>
+                    <div class="box">
+                      <p>
+                        <span>3</span>. Do you have pets? Do they
+                        <span>chew</span> plants?
+                      </p>
+                    </div>
+                    <select name="pets" id="pets" class="form__select">
+                      <option value="">Select...</option>
+                      <option value="true">Yes</option>
+                      <option value="false">No</option>
+                    </select>
+                  </li>
+                </ol>
+              </fieldset>
+            </form>
+          </div>
+        </section>
+        <section class="no-results" id="no-results">
+          <div class="container container--results">
+            <div class="results--content">
+              <div class="no-results__text">
+                <h2 class="no-results__title">No results yet...</h2>
+                <div class="box">
+                  <h4 class="no-results_description">
+                    Use the filters above to find the plant that best fits your
+                    environment :)
+                  </h4>
+                </div>
+              </div>
+              <div class="no-results__illustration">
+                <figure>
+                  <img
+                    src="images/illustrations/no-results.png"
+                    alt="Greenthumb"
+                    class="no-results__image"
+                  />
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="picks hidden" id="picks">
+          <div class="container container--results">
+            <div class="picks__illustration">
+              <figure>
+                <img
+                  src="images/illustrations/pick.png"
+                  alt="Greenthumb"
+                  class="picks__image"
+                />
+              </figure>
+            </div>
+            <div class="picks__text">
+              <h1 class="picks__title">Our picks for you</h1>
+            </div>
+            <div class="picks__cards" id="cards"></div>
+            <button
+              class="button button--outlined"
+              type="button"
+              id="button-back-to-top"
+            >
+              back to the top
+              <figure>
+                <img
+                  src="images/icons/arrow-up.svg"
+                  alt="arrow-up"
+                  class="button__icon"
+                />
+              </figure>
+            </button>
+          </div>
+        </section>
+      </main>
     </div>
 
     <script src="./js/plants-handler.js"></script>

@@ -1,4 +1,4 @@
-@import "./scss/colors.scss";
+@import "./scss/variables.scss";
 
 .hero {
   height: 720px;
@@ -31,13 +31,13 @@
     margin-top: 400px;
   }
 
-  @media only screen and (min-width: 992px) {
+  @media only screen and (min-width: $media-query-desktop) {
     display: none;
   }
 }
 
 .hero--desktop {
-  height: 30em;
+  height: 500px;
   display: none;
   position: relative;
   flex-direction: column;
@@ -49,12 +49,12 @@
 
   &__right-leaves {
     right: 0;
-    height: 30em;
+    height: 500px;
     position: absolute;
   }
 
   &__left-leaves {
-    height: 30em;
+    height: 500px;
     position: absolute;
   }
 
@@ -64,8 +64,7 @@
   }
 
   &__text {
-    width: 23vw;
-    margin-top: 3em;
+    width: 400px;
     position: absolute;
     color: white;
   }
@@ -76,7 +75,7 @@
     position: absolute;
   }
 
-  @media only screen and (min-width: 992px) {
+  @media only screen and (min-width: $media-query-desktop) {
     display: flex;
   }
 }
@@ -84,10 +83,11 @@
 .button {
   width: 300px;
   border: none;
-  padding: 16px;
+  padding: $spacing-2;
   display: flex;
   font-size: 1em;
   cursor: pointer;
+  align-items: center;
   border-radius: 32px;
   font-weight: lighter;
   justify-content: center;
@@ -104,45 +104,60 @@
   }
 
   &__icon {
-    padding-left: 16px;
+    padding-left: $spacing-2;
   }
 
-  @media only screen and (min-width: 992px) {
-    width: 973px;
+  @media only screen and (min-width: $media-query-desktop) {
+    width: 870px;
   }
 }
 
 .form {
   color: $dark-gray;
+  height: 895px;
 
   &__option {
     margin-bottom: 64px;
+
+    @media only screen and (min-width: $media-query-desktop) {
+      margin: 0;
+    }
   }
 
   &__select {
-    width: 300px;
+    width: 270px;
     color: $gray;
     padding: 14px;
+    font-size: 14px;
+    margin-top: $spacing-2;
+    background: none;
     border-radius: 32px;
-    margin-top: 16px;
     border: $gray 1px solid;
+
+    @media only screen and (min-width: $media-query-desktop) {
+      width: 219px;
+      margin: 0;
+    }
   }
 
   &__image {
-    width: 100px;
+    width: 75px;
+    height: 75px;
   }
 
-  @media only screen and (min-width: 992px) {
-    form {
-      display: flex;
-      justify-content: space-between;
-    }
+  @media only screen and (min-width: $media-query-desktop) {
+    height: 299px;
+    margin: 0;
   }
 }
 
 .no-results {
   &__text {
     color: $gray;
+
+    @media only screen and (min-width: $media-query-desktop) {
+      width: 442px;
+    }
   }
 
   &__illustration {
@@ -150,28 +165,48 @@
     margin-top: 48px;
     justify-content: center;
 
-    @media only screen and (min-width: 992px) {
+    @media only screen and (min-width: $media-query-desktop) {
       margin-top: 0;
     }
   }
 
   &__image {
-    width: 100px;
+    height: 164.65px;
   }
 
-  @media only screen and (min-width: 992px) {
+  @media only screen and (min-width: $media-query-desktop) {
     display: flex;
     flex-direction: column;
   }
 }
 
+.results--content {
+  background-color: $light-gray;
+
+  @media only screen and (min-width: $media-query-desktop) {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+  }
+}
+
 .picks {
   &__image {
-    width: 145px;
+    width: 146px;
+
+    @media only screen and (min-width: $media-query-desktop) {
+      width: 158px;
+    }
   }
 
   &__text {
     color: $darker-green;
+  }
+
+  &__title {
+    @media only screen and (min-width: $media-query-desktop) {
+      font-size: 55px;
+    }
   }
 
   &__cards {
@@ -179,44 +214,123 @@
     overflow: auto;
     margin-top: 48px;
     margin-bottom: 48px;
-    width: fit-content;
     white-space: nowrap;
 
-    @media only screen and (min-width: 992px) {
+    @media only screen and (min-width: $media-query-desktop) {
       flex-wrap: wrap;
     }
   }
 
   &__card {
-    width: 250px;
-    height: 300px;
-    padding: 16px;
+    width: 258px;
+    height: 321px;
+    padding: $spacing-3;
     display: flex;
-    margin-right: 16px;
-    border-radius: 16px;
+    margin-right: $spacing-2;
+    border-radius: 5px;
     flex-direction: column;
     justify-content: center;
     background-color: white;
 
-    @media only screen and (min-width: 992px) {
-      width: 200px;
-      height: 250px;
-      margin-bottom: 16px;
+    &--favorite {
+      padding-left: 0;
+
+      .picks__favorite-text {
+        color: white;
+        border-bottom-right-radius: 25px;
+        border-top-right-radius: 25px;
+        background-color: #75bc97;
+        width: 150px;
+        padding-left: $spacing-2;
+        font-weight: bold;
+
+        p {
+          margin: 6px;
+        }
+      }
+
+      .picks__data {
+        padding-left: $spacing-3;
+      }
+    }
+
+    @media only screen and (min-width: $media-query-desktop) {
+      width: $card-desktop-width;
+      height: $card-desktop-height;
+      margin-bottom: $spacing-2;
+
+      &--favorite {
+        width: $card-desktop-width * 2;
+        height: $card-desktop-height * 2;
+
+        .picks__title {
+          font-size: 35px;
+          inline-size: 189px;
+          word-wrap: normal;
+
+          h4 {
+            word-wrap: normal;
+          }
+        }
+
+        .picks__info {
+          align-items: end;
+          font-size: 24px;
+          justify-content: end;
+          flex-direction: column;
+
+          svg {
+            width: 25px;
+            height: 25px;
+          }
+        }
+
+        .picks__data {
+          height: 90px;
+          display: flex;
+          padding-left: $spacing-3;
+          justify-content: space-between;
+        }
+
+        .picks__plant {
+          width: $plant-desktop-width * 1.8;
+          height: $plant-desktop-height * 1.8;
+        }
+
+        .picks__favorite-text {
+          width: 189px;
+        }
+      }
     }
   }
 
   &__plant {
-    width: 140px;
-    height: 180px;
+    width: 187px;
+    height: 221px;
     align-self: center;
+
+    @media only screen and (min-width: $media-query-desktop) {
+      width: $plant-desktop-width;
+      height: $plant-desktop-height;
+      margin-bottom: $spacing-2;
+    }
   }
 
   &__data {
     color: $dark-green;
-    padding-left: 16px;
     margin-top: 32px;
 
-    h3 {
+    h4 {
+      margin-bottom: 10px;
+      font-weight: bold;
+
+      @media only screen and (min-width: $media-query-desktop) {
+        margin-top: 0;
+        margin-bottom: 5px;
+      }
+    }
+
+    @media only screen and (min-width: $media-query-desktop) {
       margin: 0;
     }
   }

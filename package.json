@@ -9,6 +9,7 @@
     "deploy": "yarn build && surge ./dist"
   },
   "dependencies": {
+    "firebase": "^9.6.4",
     "parcel": "1.12.4",
     "surge": "^0.23.0"
   },
