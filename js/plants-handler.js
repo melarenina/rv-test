@@ -202,11 +202,13 @@ function showPlants(plants) {
           ✨ Staff favorite
         </p>
       </div>
+      <figure class="picks__figure">
         <img
           src="${picture}"
           alt="Greenthumb"
           class="picks__plant"
         />
+      </figure>
         <div class="picks__data">
           <div class="picks__title">
             <h4>${name}</h4>
@@ -224,11 +226,13 @@ function showPlants(plants) {
       `
       : `
       <div class="picks__card">
+      <figure class="picks__figure">
         <img
           src="${picture}"
           alt="Greenthumb"
           class="picks__plant"
         />
+        </figure>
         <div class="picks__data">
           <h4>${name}</h4>
           <div class="picks__info">

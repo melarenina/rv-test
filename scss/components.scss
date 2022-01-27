@@ -210,32 +210,43 @@
   }
 
   &__cards {
-    display: flex;
+    display: grid;
     overflow: auto;
+    list-style: none;
     margin-top: 48px;
     margin-bottom: 48px;
-    white-space: nowrap;
+    grid-auto-flow: column;
 
     @media only screen and (min-width: $media-query-desktop) {
-      flex-wrap: wrap;
+      grid-auto-flow: dense;
+      row-gap: 20px;
+      grid-template-columns: repeat(4, 1fr);
+      overflow: hidden;
     }
   }
 
   &__card {
     width: 258px;
     height: 321px;
-    padding: $spacing-3;
     display: flex;
-    margin-right: $spacing-2;
     border-radius: 5px;
+    padding: $spacing-3;
     flex-direction: column;
     justify-content: center;
+    margin-right: $spacing-2;
     background-color: white;
+
+    @media only screen and (min-width: $media-query-desktop) {
+      width: $card-desktop-width;
+      height: $card-desktop-height;
+    }
 
     &--favorite {
       padding-left: 0;
 
       .picks__favorite-text {
+        position: relative;
+        z-index: 2;
         color: white;
         border-bottom-right-radius: 25px;
         border-top-right-radius: 25px;
@@ -252,31 +263,28 @@
       .picks__data {
         padding-left: $spacing-3;
       }
-    }
 
-    @media only screen and (min-width: $media-query-desktop) {
-      width: $card-desktop-width;
-      height: $card-desktop-height;
-      margin-bottom: $spacing-2;
+      .picks__figure {
+        height: 52%;
+        margin-top: $spacing-5;
+        margin-bottom: $spacing-5;
+      }
 
-      &--favorite {
-        width: $card-desktop-width * 2;
-        height: $card-desktop-height * 2;
+      @media only screen and (min-width: $media-query-desktop) {
+        grid-row: span 2;
+        width: ($card-desktop-width * 2.5) + 20px;
+        height: ($card-desktop-height * 2) + ($spacing-3 * 2) + 20px;
+        grid-column: span 2;
 
         .picks__title {
           font-size: 35px;
-          inline-size: 189px;
-          word-wrap: normal;
-
-          h4 {
-            word-wrap: normal;
-          }
+          width: 189px;
         }
 
         .picks__info {
           align-items: end;
           font-size: 24px;
-          justify-content: end;
+          justify-content: space-around;
           flex-direction: column;
 
           svg {
@@ -292,11 +300,6 @@
           justify-content: space-between;
         }
 
-        .picks__plant {
-          width: $plant-desktop-width * 1.8;
-          height: $plant-desktop-height * 1.8;
-        }
-
         .picks__favorite-text {
           width: 189px;
         }
@@ -304,14 +307,30 @@
     }
   }
 
-  &__plant {
-    width: 187px;
-    height: 221px;
-    align-self: center;
+  &__figure {
+    height: 66%;
 
     @media only screen and (min-width: $media-query-desktop) {
-      width: $plant-desktop-width;
-      height: $plant-desktop-height;
+      width: 80%;
+      margin: 0 auto;
+      height: 80%;
+      text-align: center;
+      display: flex;
+    }
+  }
+
+  &__plant {
+    max-width: 100%;
+    height: 100%;
+    align-self: center;
+    margin: 0 auto;
+    display: block;
+
+    @media only screen and (min-width: $media-query-desktop) {
+      max-height: 100%;
+      max-width: 100%;
+      display: block;
+      margin: 0 auto;
       margin-bottom: $spacing-2;
     }
   }

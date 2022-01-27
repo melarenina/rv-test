@@ -1,0 +1,40 @@
+@import "./scss/variables.scss";
+
+.form {
+  color: $dark-gray;
+  height: 895px;
+
+  &__option {
+    margin-bottom: 64px;
+
+    @media only screen and (min-width: $media-query-desktop) {
+      margin: 0;
+    }
+  }
+
+  &__select {
+    width: 270px;
+    color: $gray;
+    padding: 14px;
+    font-size: 14px;
+    margin-top: $spacing-2;
+    background: none;
+    border-radius: 32px;
+    border: $gray 1px solid;
+
+    @media only screen and (min-width: $media-query-desktop) {
+      width: 219px;
+      margin: 0;
+    }
+  }
+
+  &__image {
+    width: 75px;
+    height: 75px;
+  }
+
+  @media only screen and (min-width: $media-query-desktop) {
+    height: 299px;
+    margin: 0;
+  }
+}

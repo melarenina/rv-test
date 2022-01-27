@@ -3,13 +3,14 @@
 .container {
   padding: $spacing-4;
 
-  &--results {
-    background-color: $light-gray;
-  }
-
   @media only screen and (min-width: $media-query-desktop) {
-    padding: 57px 285px 53px 270px;
+    width: 900px;
+    margin: 0 auto;
   }
+}
+
+.bg-gray {
+  background-color: $light-gray;
 }
 
 .hidden {
