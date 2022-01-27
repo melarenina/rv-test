@@ -1,0 +1,25 @@
+@import "./scss/variables.scss";
+
+.no-results {
+  &__text {
+    color: $gray;
+
+    @media only screen and (min-width: $media-query-desktop) {
+      width: 442px;
+    }
+  }
+
+  &__illustration {
+    display: flex;
+    margin-top: 48px;
+    justify-content: center;
+
+    @media only screen and (min-width: $media-query-desktop) {
+      margin-top: 0;
+    }
+  }
+
+  &__image {
+    height: 164.65px;
+  }
+}

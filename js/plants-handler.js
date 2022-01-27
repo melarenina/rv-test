@@ -27,8 +27,9 @@ document.addEventListener(
           const non_favorites = data.filter(
             (plant) => plant.staff_favorite === false
           );
-          showPlants(favorites);
-          showPlants(non_favorites);
+
+          const orderedResponse = [...favorites, ...non_favorites];
+          showPlants(orderedResponse);
         })
         .catch(function (err) {
           console.log(err);
@@ -59,6 +60,8 @@ function showPlants(plants) {
 
   noResultsDiv.classList.add("hidden");
   picksDiv.classList.remove("hidden");
+
+  cardsHTML.innerHTML = "";
 
   plants.map((plant) => {
     let sun, water;
@@ -194,14 +197,21 @@ function showPlants(plants) {
         break;
     }
 
-    const card = plant.staff_favorite
-      ? `
-      <div class="picks__card picks__card--favorite">
-      <div class="picks__favorite-text">
-        <p>
+    const card = `
+      <div id="card" class="picks__card ${
+        staff_favorite ? `picks__card--favorite` : ""
+      }">
+      ${
+        staff_favorite
+          ? `
+        <div class="picks__favorite-text">
+          <p>
           ✨ Staff favorite
-        </p>
-      </div>
+          </p>
+        </div>
+      `
+          : ""
+      }
       <figure class="picks__figure">
         <img
           src="${picture}"
@@ -223,29 +233,7 @@ function showPlants(plants) {
           </div>
         </div>
       </div>
-      `
-      : `
-      <div class="picks__card">
-      <figure class="picks__figure">
-        <img
-          src="${picture}"
-          alt="Greenthumb"
-          class="picks__plant"
-        />
-        </figure>
-        <div class="picks__data">
-          <h4>${name}</h4>
-          <div class="picks__info">
-            <h3 style="margin: 0">$${price}</h3>
-            <div class="picks__icons">
-              ${pet}
-              ${sun}
-              ${water}
-            </div>
-          </div>
-        </div>
-      </div>
-  `;
+      `;
     cardsHTML.insertAdjacentHTML("beforeend", card);
   });
 }

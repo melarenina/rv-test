@@ -1,0 +1,81 @@
+@import "./scss/variables.scss";
+
+.hero {
+  height: 720px;
+  position: relative;
+  background-color: $light-green;
+
+  @media only screen and (min-width: $media-query-desktop) {
+    display: none;
+  }
+
+  &__logo {
+    position: absolute;
+  }
+
+  &__leaves {
+    width: 100vw;
+    position: absolute;
+  }
+
+  &__image {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__text {
+    width: 80vw;
+    color: white;
+    margin-top: 3em;
+    position: absolute;
+  }
+
+  &__plant-person {
+    width: 100%;
+    margin-top: 400px;
+  }
+}
+
+.hero--desktop {
+  height: 500px;
+  display: none;
+  position: relative;
+  flex-direction: column;
+  background-color: $light-green;
+
+  @media only screen and (min-width: $media-query-desktop) {
+    display: flex;
+  }
+
+  &__logo {
+    position: absolute;
+  }
+
+  &__right-leaves {
+    right: 0;
+    height: 500px;
+    position: absolute;
+  }
+
+  &__left-leaves {
+    height: 500px;
+    position: absolute;
+  }
+
+  &__image {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__text {
+    width: 400px;
+    color: white;
+    position: absolute;
+  }
+
+  &__plant-person {
+    height: 27em;
+    position: absolute;
+    margin-left: 44.4em;
+  }
+}

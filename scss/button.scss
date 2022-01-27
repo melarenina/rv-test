@@ -1,0 +1,33 @@
+@import "./scss/variables.scss";
+
+.button {
+  width: 300px;
+  border: none;
+  display: flex;
+  font-size: 1em;
+  cursor: pointer;
+  padding: $spacing-2;
+  align-items: center;
+  border-radius: 32px;
+  font-weight: lighter;
+  justify-content: center;
+
+  @media only screen and (min-width: $media-query-desktop) {
+    width: 870px;
+  }
+
+  &--outlined {
+    color: $dark-green;
+    background-color: transparent;
+    border: 1px solid $dark-green;
+  }
+
+  &--filled {
+    color: white;
+    background-color: $dark-green;
+  }
+
+  &__icon {
+    padding-left: $spacing-2;
+  }
+}

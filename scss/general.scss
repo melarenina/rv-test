@@ -13,6 +13,16 @@
   background-color: $light-gray;
 }
 
+.results--content {
+  background-color: $light-gray;
+
+  @media only screen and (min-width: $media-query-desktop) {
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .hidden {
   display: none;
 }
@@ -54,8 +64,8 @@ figure {
 }
 
 fieldset {
-  border: none;
   padding: 0;
+  border: none;
 }
 
 ol {
@@ -63,8 +73,8 @@ ol {
   list-style: none;
 
   @media only screen and (min-width: $media-query-desktop) {
+    margin: 0;
     display: flex;
     justify-content: space-between;
-    margin: 0;
   }
 }
