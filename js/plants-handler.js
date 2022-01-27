@@ -69,9 +69,8 @@ function showPlants(plants) {
     const price = plant.price;
     const picture = plant.url;
     const staff_favorite = plant.staff_favorite;
-    const pet =
-      plant.toxicity === true
-        ? `
+    const pet = plant.toxicity
+      ? `
         <svg width="18px" height="19px" viewBox="0 0 18 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <title>Icon/Big/Toxic</title>
         <g id="desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -85,7 +84,7 @@ function showPlants(plants) {
           </g>
         </svg>
         `
-        : `
+      : `
         <svg width="22px" height="17px" viewBox="0 0 22 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <title>Icon/Big/Pet</title>
         <g id="desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
